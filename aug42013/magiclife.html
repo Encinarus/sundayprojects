@@ -15,23 +15,24 @@
 			background-color: #F0F0F0;
 		}
 
-		ul {
-			list-style-type: none;
-			padding: 0px;
-			margin: 0px;
-			display: inline;
+		.life-counter {
+			padding-top: .5em;
+			text-align: center;
 		}
-
 		.life-buttons a {
 			border-radius: 5px;
 			border-style: solid;
-			border-width: 2px;
+			border-width: 1px;
 			border-color: black;
 			display: inline-block;
-			min-width: 2em;
+			min-width: 3em;
+			min-height: 2em;
+			vertical-align: middle;
 			text-align: center;
 			font-style: normal;
 			text-decoration: none;
+			margin: 2px;
+			padding-top: .4em;
 		}
 
 		.life-buttons a:hover {
@@ -41,9 +42,9 @@
 	</head>
 	<body>
 		<div ng-controller="MagicCtrl" class="container">
-			<div class="span-24" style="padding-top: 1em;">
-				<h1 class="span-4">{{life(0)}} life</h1>
-				<div class="life-buttons span-4">
+			<div class="span-8 border" style="padding-top: 1em;">
+				<h1 class="life-counter span-4">{{life(0)}} life</h1>
+				<div class="life-buttons span-3">
 					<strong>{{name(0)}}</strong>
 					<br/>
 					<a href="" ng-click="incrementHealth(0, 1)">+1</a>
@@ -53,10 +54,9 @@
 					<a href="" ng-click="decrementHealth(0, 5)">-5</a>
 				</div>
 			</div>
-			<hr class="span-8" style="margin-top: 1em;"/>
-			<div class="span-24" style="padding-top: 1em;">
-				<h1 class="span-4">{{life(1)}} life</h1>
-				<div class="life-buttons span-4">
+			<div class="span-8" style="padding-top: 1em;">
+				<h1 class="life-counter span-4">{{life(1)}} life</h1>
+				<div class="life-buttons span-3">
 					<strong>{{name(1)}}</strong>
 					<br/>
 					<a href="" ng-click="incrementHealth(1, 1)">+1</a>
